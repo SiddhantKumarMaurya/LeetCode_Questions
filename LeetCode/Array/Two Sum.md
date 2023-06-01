@@ -1,4 +1,4 @@
-# [1. Two Sum](https://leetcode.com/problems/two-sum/)
+# [Two Sum](https://leetcode.com/problems/two-sum/)
 ```java
 class Solution {
 public int[] twoSum(int[] nums, int target) {
