@@ -1,4 +1,4 @@
-# Search Insert Position
+# [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
 ```java
 class Solution {
     public int searchInsert(int[] nums, int target) {
