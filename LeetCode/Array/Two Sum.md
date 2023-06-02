@@ -1,4 +1,7 @@
 # [Two Sum](https://leetcode.com/problems/two-sum/)
+## Problem Statement
+![image](https://github.com/SiddhantKumarMaurya/vigilant-invention/assets/107787014/5d7916d8-cdd7-4ceb-b96b-e8e6877f401c)
+## Solution
 ```java
 class Solution {
 public int[] twoSum(int[] nums, int target) {
