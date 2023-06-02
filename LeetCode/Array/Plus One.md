@@ -1,4 +1,5 @@
 # [Plus One](https://leetcode.com/problems/plus-one/)
+## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/vigilant-invention/assets/107787014/b155b67a-830e-4e60-bf0b-1f7ad7f1bed2)
 ## Solution
 ```java
