@@ -1,5 +1,6 @@
 # [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/description/)
 ## Problem Statement
+![image](https://github.com/SiddhantKumarMaurya/vigilant-invention/assets/107787014/09d76dbb-998c-41ae-b983-dd5ecae05448)
 ## Solution
 ```java
 class Solution {
