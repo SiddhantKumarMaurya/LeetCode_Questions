@@ -78,4 +78,59 @@ class Solution {
 }
 ```
 
+#### There was no point in storing the substring in an array to I change the code a bit, but this time time limit exceeded (986/987 test cases passed)
+
+``` java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int length = s.length();
+
+        // if the length of the given string is 0 or 1
+        if (length == 1) {
+            return 1;
+        } else if (length == 0) {
+            return 0;
+        }
+
+        int maxLength = 0;
+        int k = 0;
+        String str = "";
+        String nextC;
+        for (int j = 0; j < length; j++) {
+            for (int i = j; i < length; i++) {
+
+            // A character cannot ba converted to string directly
+            // So adding a string to a character the result becomes a string.
+            nextC = "" + s.charAt(i);
+
+            // the contains() check for the presence of a sequence of characters in the string
+            if (!str.contains(nextC)) {
+                str = str + nextC;
+            } else {
+                if (maxLength < str.length()) {
+                    maxLength = str.length();
+                }
+                // if the consecutive characters are not same
+                if (!nextC.contains("" + s.charAt(i - 1))) {
+                    str = s.charAt(i - 1) + nextC;
+                } else {
+                    str = nextC;
+                }
+                // str = nextC;
+            }
+
+            // For the last substring 
+            // for example "kew" in pwwkew
+            if (maxLength < str.length()) {
+                        maxLength = str.length();
+                    }
+            }
+
+            // Emptied the str for next iteration
+            str = "";
+        }
+        return maxLength;
+    }
+}
+```
 #### I will solve this problem using python and also update in java version
