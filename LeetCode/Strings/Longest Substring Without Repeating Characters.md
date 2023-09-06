@@ -78,7 +78,7 @@ class Solution {
 }
 ```
 
-#### There was no point in storing the substring in an array to I change the code a bit, but this time time limit exceeded (986/987 test cases passed)
+#### There was no point in storing the substring in an array so I change the code a bit, but this time time limit exceeded (986/987 test cases passed)
 
 ``` java
 class Solution {
