@@ -133,4 +133,58 @@ class Solution {
     }
 }
 ```
-#### I will solve this problem using python and also update in java version
+
+## Solution (final)
+``` java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        
+        int length = s.length();
+
+        // if the length of the given string is 0 or 1
+        if (length == 1) {
+            return 1;
+        } else if (length == 0) {
+            return 0;
+        }
+
+        int maxLength = 0;
+
+        // K is used for obtaining all the combinations from the begining
+        int k = 0;
+        String str = "";
+        String nextC;
+        for (int i = 0; i < length; i++) {
+
+            // A character cannot ba converted to string directly
+            // So adding a string to a character the result becomes a string.
+            nextC = "" + s.charAt(i);
+
+            // the contains() check for the presence of a sequence of characters in the string
+            if (!str.contains(nextC)) {
+                str = str + nextC;
+
+                // For the last character in the string
+                // when the last character is appended the "str", then the length has to be calculated
+                // since, it's the last iteration else block is not executed
+                // thus, I have use the following code 
+                if (i == length - 1) {
+                    if (maxLength < str.length()) {
+                    maxLength = str.length();
+                }
+                }
+            } else {
+                if (maxLength < str.length()) {
+                    maxLength = str.length();
+                }
+
+                // Empty the string for new strings
+                str = "";
+                i = k++;
+            }
+        }
+        return maxLength;
+    }
+}
+```
+#### I will solve this problem using python too
