@@ -48,7 +48,7 @@ class Solution {
 }
 ```
 ## Solution (Second)
-##### All the test cases pass and is successfully accepted but it's time complexity is O(n^2^). So, learn about manacher's algorithm. Manacher's Algorithm is an algorithm to find Longest Palindromic Substring in a string and its time complexity is O(n)
+##### All the test cases pass and is successfully accepted but it's time complexity is O(n<sup>2</sup>). So, learn about manacher's algorithm. Manacher's Algorithm is an algorithm to find Longest Palindromic Substring in a string and its time complexity is O(n)
 ``` java
 // Dynamic Programming Method
 
