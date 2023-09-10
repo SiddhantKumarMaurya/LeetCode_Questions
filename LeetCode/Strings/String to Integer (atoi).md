@@ -88,3 +88,186 @@ class Solution:
 
         return result
 ```
+## Solution (JavaScript)
+``` javascript
+var myAtoi = function(s) {
+    let length = s.length;
+    let i = 0;
+
+    // Skip leading spaces
+    while (i < length && s.charAt(i) === ' ') {
+        i++;
+    }
+
+    if (i === length) {
+        // String contains only spaces
+        return 0;
+    }
+
+    let sign = '+';
+    if (s.charAt(i) === '+' || s.charAt(i) === '-') {
+        sign = s.charAt(i);
+        i++;
+    }
+
+    let result = 0;
+    while (i < length && !isNaN(s.charAt(i) - '0')) {
+        let digit = s.charAt(i) - '0';
+        result = result * 10 + digit;
+
+        // Check for integer overflow
+        if (result > 2147483647) {
+            return (sign === '-') ? -2147483648 : 2147483647;
+        }
+
+        i++;
+    }
+
+    if (sign === '-') {
+        result = -result;
+    }
+
+    return result;
+};
+```
+
+## Solution (Lua)
+``` lua
+function myAtoi(s)
+    local length = string.len(s)
+    local i = 1
+
+    -- Skip leading spaces
+    while i <= length and string.sub(s, i, i) == ' ' do
+        i = i + 1
+    end
+
+    if i > length then
+        -- String contains only spaces
+        return 0
+    end
+
+    local sign = '+'
+    if string.sub(s, i, i) == '+' or string.sub(s, i, i) == '-' then
+        sign = string.sub(s, i, i)
+        i = i + 1
+    end
+
+    local result = 0
+    while i <= length and tonumber(string.sub(s, i, i)) ~= nil do
+        local digit = tonumber(string.sub(s, i, i))
+        result = result * 10 + digit
+
+        -- Check for integer overflow
+        if result > 2147483647 then
+            return (sign == '-') and -2147483648 or 2147483647
+        end
+
+        i = i + 1
+    end
+
+    if sign == '-' then
+        result = -result
+    end
+
+    return result
+end
+```
+
+## Solution (C++)
+``` c++
+class Solution {
+public:
+    int myAtoi(string s) {
+        int length = s.length();
+        int i = 0;
+
+        // Skip leading spaces
+        while (i < length && s[i] == ' ') {
+            i++;
+        }
+
+        if (i == length) {
+            // String contains only spaces
+            return 0;
+        }
+
+        char sign = '+';
+        if (s[i] == '+' || s[i] == '-') {
+            sign = s[i];
+            i++;
+        }
+
+        long long result = 0; // Using long long for range checking
+        while (i < length && isdigit(s[i])) {
+            int digit = s[i] - '0';
+            result = result * 10 + digit;
+
+            // Check for integer overflow
+            if (result > INT_MAX) {
+                return (sign == '-') ? INT_MIN : INT_MAX;
+            }
+
+            i++;
+        }
+
+        if (sign == '-') {
+            result = -result;
+        }
+
+        return static_cast<int>(result);
+    }
+};
+```
+## Solutionn (C)
+``` c
+#include <stdio.h>
+#include <ctype.h>
+#include <limits.h>
+
+int myAtoi(char *s) {
+    int i = 0;
+
+    // Skip leading spaces
+    while (isspace(s[i])) {
+        i++;
+    }
+
+    if (s[i] == '\0') {
+        // String contains only spaces
+        return 0;
+    }
+
+    char sign = '+';
+    if (s[i] == '+' || s[i] == '-') {
+        sign = s[i];
+        i++;
+    }
+
+    long long result = 0; // Using long long for range checking
+    while (isdigit(s[i])) {
+        int digit = s[i] - '0';
+        result = result * 10 + digit;
+
+        // Check for integer overflow
+        if (result > INT_MAX) {
+            return (sign == '-') ? INT_MIN : INT_MAX;
+        }
+
+        i++;
+    }
+
+    if (sign == '-') {
+        result = -result;
+    }
+
+    return (int)result;
+}
+
+int main() {
+    char s[] = "-91283472332";
+    int result = myAtoi(s);
+    printf("%d\n", result);
+    return 0;
+}
+```
