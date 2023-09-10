@@ -219,7 +219,7 @@ public:
     }
 };
 ```
-## Solutionn (C)
+## Solution (C)
 ``` c
 #include <stdio.h>
 #include <ctype.h>
