@@ -1,7 +1,7 @@
 # [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/description/)
 ## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/c0ded6f2-b08f-4ccf-be39-5b9696bb79df)
-## Solution (First)
+## Solution (Java)
 ``` java
 class Solution {
     public int myAtoi(String s) {
@@ -50,7 +50,7 @@ class Solution {
 }
 ```
 
-## Solution(Second)
+## Solution(Python)
 ``` python
 class Solution:
     def myAtoi(self, s: str) -> int:
