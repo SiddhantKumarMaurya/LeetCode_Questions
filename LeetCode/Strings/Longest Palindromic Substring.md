@@ -2,7 +2,7 @@
 ## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/7f8f4bf1-9563-40f1-b2d7-393f4868c929)
 ## Solution (First)
-##### All the test cases pass but the time limit exceeds as the complexity of this program is O(n^3).
+##### All the test cases pass but the time limit exceeds as the complexity of this program is O(n^3^).
 ``` java
 class Solution {
 
@@ -48,7 +48,7 @@ class Solution {
 }
 ```
 ## Solution (Second)
-##### All the test cases pass and is successfully accepted but it's time complexity is O(n^2). So, learn about manacher's algorithm. Manacher's Algorithm is an algorithm to find Longest Palindromic Substring in a string and its time complexity is O(n)
+##### All the test cases pass and is successfully accepted but it's time complexity is O(n^2^). So, learn about manacher's algorithm. Manacher's Algorithm is an algorithm to find Longest Palindromic Substring in a string and its time complexity is O(n)
 ``` java
 // Dynamic Programming Method
 
