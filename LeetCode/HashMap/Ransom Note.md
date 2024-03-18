@@ -44,3 +44,6 @@ class Solution {
     }
 }
 ```
+
+## Another Possible Solution:
+- Short both of the strings and compare till the length of ransomNote. If both the strings are same then return true and false otherwise.
