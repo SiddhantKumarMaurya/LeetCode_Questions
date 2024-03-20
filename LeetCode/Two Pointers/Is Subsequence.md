@@ -2,6 +2,7 @@
 ## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/bec48eb0-adde-429f-8bc7-b0902cc43f38)
 ## Solution
+```java
 class Solution {
     public boolean isSubsequence(String s, String t) {
         if (s.length() == 0) // An empty string is always a subsequence of any string
@@ -22,3 +23,4 @@ class Solution {
         return false;
     }
 }
+```
