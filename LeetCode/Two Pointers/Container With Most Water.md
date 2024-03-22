@@ -24,4 +24,4 @@ class Solution {
         return maxWater;
     }
 }
-```java
+```
