@@ -2,6 +2,7 @@
 ## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/219f212f-8edf-46c8-b3ac-f83c6b599fef)
 ## Solution
+`Time Complexity: O(n)`
 ```java
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {
