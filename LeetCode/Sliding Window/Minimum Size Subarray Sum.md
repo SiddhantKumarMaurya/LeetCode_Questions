@@ -22,3 +22,43 @@ class Solution {
     }
 }
 ```
+`Time Complexity: O(nlogn)`
+```java
+import java.util.Arrays;
+
+class Solution {
+    public int minSubArrayLen(int target, int[] nums) {
+        int n = nums.length;
+        int[] sums = new int[n + 1];
+        int minLength = Integer.MAX_VALUE;
+
+        // Constructing the cumulative sum array
+        for (int i = 1; i <= n; i++) {
+            sums[i] = sums[i - 1] + nums[i - 1];
+        }
+
+        // Performing binary search
+        for (int i = 0; i < n; i++) {
+            int end = binarySearch(sums, i + 1, n, sums[i] + target);
+            if (end != -1) {
+                minLength = Math.min(minLength, end - i);
+            }
+        }
+
+        return minLength == Integer.MAX_VALUE ? 0 : minLength;
+    }
+
+    // Binary search to find the right boundary index
+    private int binarySearch(int[] sums, int start, int end, int target) {
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (sums[mid] >= target) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return start <= sums.length - 1 ? start : -1;
+    }
+}
+```
