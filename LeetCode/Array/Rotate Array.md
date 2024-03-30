@@ -23,3 +23,23 @@ class Solution {
     }
 }
 ```
+`Right approach but time limit exceeds when the size of array is very large`
+```java
+class Solution {
+    public void rotate(int[] nums, int k) {
+        if (k == 0) return;
+        for (int i = 0; i < k; i++) {
+            rotateOnce(nums);
+        }
+    }
+
+    public void rotateOnce(int[] nums) {
+        int length = nums.length;
+        int temp = nums[length - 1];
+        for(int i = length - 1; i > 0; i--) {
+            nums[i] = nums[i - 1];
+        }
+        nums[0] = temp;
+    }
+}
+```
