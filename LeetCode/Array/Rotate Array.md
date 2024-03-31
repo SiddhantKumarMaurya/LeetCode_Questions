@@ -46,7 +46,7 @@ class Solution {
 }
 ```
 ## Solution 3rd
-`Time Complexity: O(n)`
+`Time Complexity: O(n)` `Space Complexity: O(1)` `Time taken for execution on LeetCode: 0ms`
 ```java
 class Solution {
     public static void rotate(int[] nums, int k) {
@@ -65,6 +65,32 @@ class Solution {
             nums[end] = temp;
             start++;
             end--;
+        }
+    }
+}
+```
+## Solution 4th (cyclic approach just like the first one but successful)
+`Time Complexity: O(n)` `Space Complexity: O(1)` `Time taken for execution of LeetCode: 2ms`
+```java
+class Solution {
+    public static void rotate(int[] nums, int k) {
+        int n = nums.length;
+        k %= n; // in case k is greater than the length of the array
+        
+        if (k == 0) return; // No need to rotate if k is 0
+        
+        int count = 0;
+        for (int start = 0; count < n; start++) {
+            int current = start;
+            int prev = nums[start];
+            do {
+                int next = (current + k) % n;
+                int temp = nums[next];
+                nums[next] = prev;
+                prev = temp;
+                current = next;
+                count++;
+            } while (start != current);
         }
     }
 }
