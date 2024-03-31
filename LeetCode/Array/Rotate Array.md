@@ -46,7 +46,7 @@ class Solution {
 }
 ```
 ## Solution 3rd
-`Time Complexity: O(n)'
+`Time Complexity: O(n)`
 ```java
 class Solution {
     public static void rotate(int[] nums, int k) {
