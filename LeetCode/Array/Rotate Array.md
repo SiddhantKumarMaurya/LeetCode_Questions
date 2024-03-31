@@ -23,6 +23,7 @@ class Solution {
     }
 }
 ```
+## Solution 2nd (Iterative Approach)
 `Right approach but time limit exceeds when the size of array is very large`
 ```java
 class Solution {
