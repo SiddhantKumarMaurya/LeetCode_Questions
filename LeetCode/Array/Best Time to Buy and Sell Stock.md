@@ -1,5 +1,5 @@
 # [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/?envType=study-plan-v2&envId=top-interview-150)
-## Problem Statment
+## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/43243ee3-744f-4301-a192-066e9036f6ab)
 ## Solution (Incorrect)
 ```java
