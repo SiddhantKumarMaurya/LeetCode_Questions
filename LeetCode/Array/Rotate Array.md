@@ -24,7 +24,8 @@ class Solution {
 }
 ```
 ## Solution 2nd (Iterative Approach)
-`Right approach but time limit exceeds when the size of array is very large`
+`Right approach but time limit exceeds when the size of array is very large
+Time Complexity: O(n*k)`
 ```java
 class Solution {
     public void rotate(int[] nums, int k) {
