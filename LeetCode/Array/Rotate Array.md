@@ -70,7 +70,7 @@ class Solution {
 }
 ```
 ## Solution 4th (cyclic approach just like the first one but successful)
-`Time Complexity: O(n)` `Space Complexity: O(1)` `Time taken for execution of LeetCode: 2ms`
+`Time Complexity: O(n)` `Space Complexity: O(1)` `Time taken for execution on LeetCode: 2ms`
 ```java
 class Solution {
     public static void rotate(int[] nums, int k) {
