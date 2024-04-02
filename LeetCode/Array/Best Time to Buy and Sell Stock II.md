@@ -78,7 +78,7 @@ class Solution {
     }
 }
 ```
-
+---
 ## Solution (Time Limit Exceeds)
 ```java
 class Solution {
@@ -108,6 +108,7 @@ class Solution {
     }
 }
 ```
+___
 ## Solution (Greedy Approach)
 ```java
 class Solution {
