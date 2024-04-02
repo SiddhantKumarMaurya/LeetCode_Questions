@@ -1,4 +1,5 @@
 # [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/?envType=study-plan-v2&envId=top-interview-150)
+## Topics: `Array`, `Dynamic Programming`, `Greedy`
 ## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/d4261794-633f-40d9-875e-932b51c2530e)
 ## Solutions (Incomplete):
