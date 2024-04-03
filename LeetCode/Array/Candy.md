@@ -32,10 +32,10 @@ class Solution {
         }
         return Arrays.stream(candies).sum(); // Time Complexity: O(n)
     }
+}
 ```
 ---
 ## Solution
 ```java
 
 ```
-}
