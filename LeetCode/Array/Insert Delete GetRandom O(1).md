@@ -51,6 +51,7 @@ class RandomizedSet {
 ---
 ## Solution
 ```java
+// Time Taken: 22 ms
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Random;
