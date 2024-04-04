@@ -3,7 +3,7 @@
 ## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/c558e877-8f37-43b5-8fc5-c4ec0b24912e)
 ## Solution (Incorrect)
-``java
+```java
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
