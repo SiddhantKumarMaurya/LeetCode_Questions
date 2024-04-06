@@ -19,3 +19,29 @@ class Solution {
     }
 }
 ```
+---
+```java
+class Solution {
+    public int findMin(int[] nums) {
+        int left = 0;
+        int right = nums.length - 1;
+
+        // Perform binary search
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+
+            // Check if the minimum element is in the left or right half
+            if (nums[mid] < nums[right]) {
+                // Minimum element is in the left half
+                right = mid;
+            } else {
+                // Minimum element is in the right half (excluding mid)
+                left = mid + 1;
+            }
+        }
+
+        // Left pointer points to the minimum element
+        return nums[left];
+    }
+}
+```
