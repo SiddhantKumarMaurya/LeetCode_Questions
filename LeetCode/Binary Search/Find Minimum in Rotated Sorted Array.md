@@ -4,7 +4,6 @@
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/d3acf405-819d-4fb8-b644-b1f0497f47ad)
 ## Solution
 ```java
-import java.util.Arrays;
 class Solution {
     public int findMin(int[] nums) {
         int length = nums.length;
