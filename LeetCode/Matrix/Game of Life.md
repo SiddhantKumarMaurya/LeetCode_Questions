@@ -139,6 +139,7 @@ class Solution {
 ---
 ## Solution
 ```java
+// This algorithm is called "Conway's Game of Life." It is a cellular automaton devised by the British mathematician John Horton Conway in 1970. The game is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. Players interact with the Game of Life by creating an initial configuration and observing how it evolves according to a set of rules.
 class Solution {
     public void gameOfLife(int[][] board) {
         int m = board.length;
