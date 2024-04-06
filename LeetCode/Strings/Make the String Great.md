@@ -42,4 +42,28 @@ class Solution {
 ---
 ## Solution
 ```java
+class Solution {
+    public String makeGood(String s) {
+        StringBuilder sb = new StringBuilder();
+        int length = s.length();
+
+        for (int i = 0; i < length; i++) {
+            char currentChar = s.charAt(i);
+            if (!sb.isEmpty()) {
+                int sbLength = sb.length();
+                char sbLastChar = sb.charAt(sbLength - 1);
+                if (Math.abs(currentChar - sbLastChar) == 32) {
+                    sb.delete(sbLength - 1, sbLength);
+                    // or we can do
+                    // sb.deleteCharAt(sbLength - 1)
+                } else {
+                    sb.append(currentChar);
+                }
+            } else {
+                sb.append(currentChar);
+            }
+        }
+        return sb.toString();
+    }
+}
 ```
