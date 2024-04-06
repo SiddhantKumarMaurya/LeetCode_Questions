@@ -15,6 +15,7 @@ class Solution {
         int row = board.length;
         int column = board[0].length;
 
+        // Corner Cases
         if (row == 1)
         {
             if (column == 1) {
@@ -45,6 +46,7 @@ class Solution {
             }
         }  
 
+        // Corner Cases
         if (column == 1) {
             if (row == 2) {
                 board[0][0] = 0;
