@@ -38,26 +38,17 @@ class Solution {
     public boolean checkValidString(String s) {
         int length = s.length();
         int leftParantheses = 0;
+        int rightParantheses = 0;
+        int astrisks = 0;
 
         for (int i = 0; i < length; i++) {
-            if (s.charAt(i) == '(') {
-                leftParantheses++;
-            } else if (s.charAt(i) == '*') {
-                leftParantheses++;
-            } else leftParantheses--;
+            if (s.charAt(i) == '(') leftParantheses ++;
+            else if (s.charAt(i) == '*') astrisks ++;
+            else rightParantheses ++;
         }
 
-        int rightParantheses = 0;
-        for (int i = length - 1; i >= 0; i--) {
-            if (s.charAt(i) == ')') {
-                rightParantheses++;
-            } else if (s.charAt(i) == '*') {
-                rightParantheses++;
-            } else rightParantheses--;
-        }
-
-        if (leftParantheses == 0 || rightParantheses == 0 || rightParantheses == leftParantheses) return true;
-        return false;
+        // we need to subtract astrisks only if leftParantheses != rightParantheses
+        return (Math.abs(leftParantheses - rightParantheses) - astrisks) <= 0;
     }
 }
 ```
