@@ -3,6 +3,7 @@
 ## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/eba59406-182d-4e1c-9ca8-6538f35fbf6b)
 ## Solution
+`Approach used: Dynamic Programming along with largest rectangle in histogram`
 ```java
 class Solution {
     public int maximalRectangle(char[][] matrix) {
