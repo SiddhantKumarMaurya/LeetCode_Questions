@@ -30,12 +30,11 @@ class Solution {
 }
 ```
 
-**didn't work for the case : [1,2,3,4,5]
-output: 6;
-expected output: 4;
+- didn't work for the case : [1,2,3,4,5]
+    - output: 6;
+    - expected output: 4;
+- Because I misunderstood the question. I had to find the sum of all the leaf nodes not all the left nodes. The above program is a solution for sum of all the left nodes.
 
-Because I misunderstood the question. I had to find the sum of all the leaf nodes not all the left nodes. The above program is a solution for sum of all the left nodes.
-**
 ---
 ## Solution
 ```java
