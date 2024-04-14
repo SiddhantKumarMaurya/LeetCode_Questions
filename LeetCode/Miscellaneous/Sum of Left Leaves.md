@@ -1,5 +1,5 @@
 # [Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/description/)
-## Topics: `Tree`, `Depth-First Search`, Breadth-First Search`, `Binary Tree`
+## Topics: `Tree`, `Depth-First Search`, `Breadth-First Search`, `Binary Tree`
 ## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/54fc5542-6044-4c68-abd5-ffdc0d68e27a)
 ## Solution (Incorrect)
