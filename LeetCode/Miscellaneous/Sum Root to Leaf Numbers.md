@@ -57,3 +57,48 @@ class Solution {
     }
 }
 ```
+---
+## Solution
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public int sumNumbers(TreeNode root) {
+        return sumNumbersHelper(root, 0);
+    }
+    
+    private int sumNumbersHelper(TreeNode root, int currentSum) {
+        if (root == null) {
+            return 0;
+        }
+        
+        // Update the current sum with the value of the current node
+        int newSum = currentSum * 10 + root.val;
+        
+        // If the current node is a leaf node, return the current sum
+        if (root.left == null && root.right == null) {
+            return newSum;
+        }
+        
+        // Recursively calculate the sum of root-to-leaf numbers for the left and right subtrees
+        int leftSum = sumNumbersHelper(root.left, newSum);
+        int rightSum = sumNumbersHelper(root.right, newSum);
+        
+        // Return the sum of root-to-leaf numbers for the current subtree
+        return leftSum + rightSum;
+    }
+}
+```
