@@ -78,3 +78,61 @@ class Solution {
     }
 }
 ```
+---
+## Solution
+```java
+class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int num : nums){
+            map.put(num,map.getOrDefault(num,0)+1);
+        }
+        PriorityQueue<Integer> heap = new PriorityQueue<>((n1,n2) -> map.get(n1)-map.get(n2));
+        for(int num : map.keySet()){
+            heap.add(num);
+            if(heap.size() > k){
+                heap.remove();
+            }
+        }
+        int[] ans = new int[k];
+        for(int i = 0 ; i < k ; i++){
+            ans[i] = heap.remove();
+        }
+        return ans;
+    }
+}
+```
+---
+## Solution
+```java
+class Solution {
+//     input: nums arr, output: int arr, constraints: count all items in arr best time O(nlogn), space: O(n), edge cases: all 1 item and ask for top 2, empty arr, top 2 and there's a tie between 2nd and 3rd
+//     testing: all 1 item and ask for top 2 -> [num], empty arr -> [], top 2 and there's a tie between 2nd and 3rd -> [num1, num2] either
+//     strategy
+//     hashmap to track the count so far
+//     heap to store item and count
+//     pop items from heap till set is of a particular size
+//     return set as array
+    public int[] topKFrequent(int[] nums, int k) {
+        // int: count
+        Map<Integer, Integer> map = new HashMap();
+//         {[num: count]}
+        PriorityQueue<int[]> queue = new PriorityQueue<int[]>((a, b) -> b[1] - a[1]);
+        for(int num: nums) 
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        
+        for(Map.Entry<Integer, Integer> entry: map.entrySet())
+            queue.add(new int[]{entry.getKey(), entry.getValue()});
+        
+        int[] result = new int[k];
+        int i = 0;
+        while(k > 0 && !queue.isEmpty()){
+            result[i++] = queue.poll()[0];
+            k--;
+        }
+        
+        return result;
+    }
+}
+```
+
