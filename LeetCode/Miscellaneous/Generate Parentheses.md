@@ -77,18 +77,18 @@ class Solution {
     List<String> res = new ArrayList<>();
 
     public List<String> generateParenthesis(int n) {
-        kalzak(new StringBuilder("("), 1, n);
+        helper(new StringBuilder("("), 1, n);
         return res;
     }
 
-    public void kalzak(StringBuilder sb, int bracketsDiff, int n) {
+    public void helper(StringBuilder sb, int bracketsDiff, int n) {
         if (sb.length()+bracketsDiff > n*2) return;
         if (sb.length() == n*2 && bracketsDiff == 0) {
             res.add(sb.toString());
             return;
         }
-        if (bracketsDiff < n) kalzak(new StringBuilder(sb).append('('), bracketsDiff + 1, n);
-        if (bracketsDiff > 0) kalzak(new StringBuilder(sb).append(')'), bracketsDiff - 1, n);
+        if (bracketsDiff < n) helper(new StringBuilder(sb).append('('), bracketsDiff + 1, n);
+        if (bracketsDiff > 0) helper(new StringBuilder(sb).append(')'), bracketsDiff - 1, n);
     }
 }
 ```
