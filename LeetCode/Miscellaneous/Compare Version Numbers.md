@@ -56,7 +56,7 @@ class Solution {
 }
 ```
 ---
-## Solution (Two Pointers)
+## Solution (Two Pointers) (1ms Faster)
 ```java
 class Solution {
     public int compareVersion(String version1, String version2) {
