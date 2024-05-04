@@ -28,6 +28,7 @@ class Solution {
 /*
 Failed for the following test case:
 people = 5, 1, 4, 2
+limit = 6
 Output: 3
 Expected output: 2
 */
