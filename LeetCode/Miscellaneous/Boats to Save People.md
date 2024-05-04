@@ -25,10 +25,12 @@ class Solution {
         return numberOfBoats;
     }
 }
-/* Failed for the following test case:
+/*
+Failed for the following test case:
 people = 5, 1, 4, 2
 Output: 3
 Expected output: 2
+*/
 ```
 ---
 ## Solution
