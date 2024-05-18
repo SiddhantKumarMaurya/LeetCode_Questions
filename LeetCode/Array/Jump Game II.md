@@ -2,7 +2,7 @@
 ## Topics: `Array`, `Dynamic Programming`, `Greedy`
 ## Problem Statement
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/93d7cf68-c3ba-43b9-9562-5636e28bc35e)
-## Solution
+## Solution (Greedy Approach)
 ```java
 class Solution {
     public int jump(int[] nums) {
