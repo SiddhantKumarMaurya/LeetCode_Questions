@@ -4,7 +4,7 @@
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/719d7519-4407-470a-839f-627f3387b654)
 ![image](https://github.com/SiddhantKumarMaurya/LeetCode_Questions/assets/107787014/e6f4fc01-1357-44cb-9db2-3283bd9d7192)
 ## Solution
-```c
+```c++
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
