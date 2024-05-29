@@ -24,7 +24,7 @@ class Solution {
 ```
 ---
 ## Solution (Correct, but too slow)
-```
+```java
 import java.math.BigInteger;
 
 class Solution {
