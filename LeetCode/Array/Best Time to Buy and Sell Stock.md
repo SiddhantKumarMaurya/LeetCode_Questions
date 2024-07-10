@@ -62,7 +62,7 @@ class Solution {
         Integer[] copiedPrices = Arrays.stream(prices).boxed().toArray(Integer[]::new);
         for (int i = 0; i < length - 1; i++) {
             ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(copiedPrices));
-            // subList() returns a List.
+            // subList() returns a view of List.
             ArrayList<Integer> copiedList = new ArrayList(arrayList.subList(i + 1, arrayList.size()));
             int maxPrice = Collections.max(copiedList);
             int currentProfit = maxPrice - prices[i];
