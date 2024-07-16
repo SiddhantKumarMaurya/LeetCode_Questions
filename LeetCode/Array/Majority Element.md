@@ -49,4 +49,4 @@ class Solution {
 ```
 ---
 ## Solution
-Sort the array and get the element at <num>n/<deno>2 the index
+Sort the array and get the element at <num>n/<deno>2th index
