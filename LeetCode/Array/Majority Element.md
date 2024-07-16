@@ -49,4 +49,4 @@ class Solution {
 ```
 ---
 ## Solution
-Sort the array and get the element at &frac n2 th index
+Sort the array and get the element at <sup>n</sup>&frasl;<sub>2</sub>th index
