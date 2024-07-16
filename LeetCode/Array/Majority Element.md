@@ -49,4 +49,4 @@ class Solution {
 ```
 ---
 ## Solution
-Sort the array and get the element at <sup>n</sup>&frasl;<sub>2</sub>th index
+Sort the array and get the element at <sup>n</sup>&frasl;<sub>2</sub><sup>th</sup> index
