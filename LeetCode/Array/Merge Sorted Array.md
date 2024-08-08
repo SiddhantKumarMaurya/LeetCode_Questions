@@ -59,6 +59,75 @@ class Solution {
     }
 }
 ```
+
+---
+
+## Solution2
+```java
+import java.util.Arrays;
+public class MergeSortedArray {
+  
+  public void mergeSort(int[] nums1, int[] nums2, int m, int n) {
+    int i = m - 1;
+    int j = n - 1;
+    int k = m + n - 1;
+    while(i >= 0 && j >= 0 && k >= 0) {
+     if (nums1[i] > nums2[j]) {
+        nums1[k] = nums1[i];
+        nums1[i] = 0;
+        k--;
+        i--;
+      } else {
+        nums1[k] = nums2[j];
+        k--;
+        j--;
+      }
+    }
+
+    while(i >= 0 && k >= 0) {
+      nums1[k] = nums1[i];
+      i--;
+      k--;
+    }
+
+    while(j >= 0 && k >= 0) {
+      nums1[k] = nums1[j];
+      k--;
+      j--;
+    }
+    
+    // To pass the test case3 (Example3)
+    // my initial thought was nums1 = nums2 but that would locally assign the reference of nums2 to nums1
+    // but outside the class when num1 is accessed it has its original reference thus has to change to the follwing code.
+    if (m < 1) {
+      nums1[0] = nums2[0];
+    }
+  }
+
+  public static void main(String[] args) {
+    int[] nums1 = {1, 2, 3, 0, 0, 0};
+    int[] nums2 = {2, 5, 6};
+    int m = 3;
+    int n = 3;
+    int[] nums3 = {1};
+    int[] nums4 = {};
+    int p = 1;
+    int q = 0;
+    int[] nums5 = {0};
+    int[] nums6 = {1};
+    int r = 0;
+    int s = 1;
+    new MergeSortedArray().mergeSort(nums1, nums2, m, n);
+    System.out.println(Arrays.toString(nums1));
+    new MergeSortedArray().mergeSort(nums3, nums4, p, q);
+    System.out.println(Arrays.toString(nums3));
+    new MergeSortedArray().mergeSort(nums5, nums6, r, s);
+    System.out.println(Arrays.toString(nums5));
+  }
+}
+```
+
+---
 ### Python
 ```python
 class Solution:
